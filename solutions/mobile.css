@@ -1,0 +1,141 @@
+/* The Mobile CSS file */
+
+
+html {
+  font-family:'Helvetica Neue','Helvetica','Arial',sans-serif;
+  font-size:16px;
+}
+body {
+  margin:0; padding:0;
+  background-color:#222222;
+}
+
+/* Demonstrating CSS Media Queries - note the differences from desktop.css */
+.using-desktop {
+  display:none;
+}
+.using-mobile {
+  font-family:'Georgia',serif;
+  font-size:18px;
+  font-style:italic;
+  color:#b1009a;
+}
+
+
+/* Container */
+.container {
+  padding:30px 0;
+
+  /* Exercise 8 */
+  width:960px;
+
+  margin:0 auto;
+  background:#ffffff;
+}
+
+/* Header */
+.header {
+  /* Exercise 7 */
+  height:240px;
+  background:#0d0d0d url('images/header.png') right top no-repeat;
+
+  position:relative;
+}
+
+/* General Styles - colors/fonts */
+h1, h2, h3 {
+  color:#b1009a; /* Ladies Learning Code pink! */
+}
+ul {
+  padding:0;
+  list-style:none;
+}
+
+.content,
+.sidebar {
+  padding:15px;
+}
+
+/* Sidebar - categories and cart */
+.sidebar {
+  /* Exercise 8 */
+  float:right;
+  width:230px;
+
+  background:#ddd;
+}
+.categories ul li a {
+  margin:4px 0;
+  font-size:12px;
+  color:#444444;
+}
+.categories ul li a:hover {
+  text-decoration:none;
+}
+
+.cart ul li {
+  background:#e6e6e6;
+  border:1px solid #fff;
+  margin:7px 0;
+  padding:5px;
+}
+.cart ul li .item-info {
+  width:100px;
+  display:inline-block;
+  margin:0 0 0 5px;
+  vertical-align:top;
+}
+.cart ul li .item-info h4 {
+  margin:5px 0 0 0; padding:0;
+  font-size:16px;
+}
+.cart ul li .item-info p {
+  margin:5px 0 0 0; padding:0;
+}
+
+/* Content section */
+.content {
+  /* Exercise 8 */
+  width:640px;
+  float:left;
+}
+.content p {
+  line-height:19px;
+}
+.content .item {
+  display:inline-block;
+  vertical-align:top;
+  width:180px;
+  margin:0 15px 20px 0;
+}
+.content .item img {
+  padding:5px;
+  border:1px solid #ddd;
+  background:#fff;
+}
+.content .item h4 {
+  margin:5px 0 0 0;
+  padding:0;
+}
+.content hr.divider {
+  height:5px;
+  background:#ccc;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  border:0;
+  margin:20px 0;
+}
+
+.footer {
+  clear:both; /* Can remove at Exercise #8 :) */
+  
+  margin:40px 0 0 0;
+  padding:30px;
+  background:#eee;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+.footer p {
+  text-align:center;
+  margin:5px 0;
+}

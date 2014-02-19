@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Media Query Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+    .small, .larger, .tablet, .desktop { 
+      display:none;
+      font:40px/40px 'Georgia',serif;
+      font-style:italic;
+      color:#b1009a;
+    }
+
+    /* 
+    The CSS media queries.
+
+    max-width: the number of pixels the screen on the device can display in width or less.
+    min-width: the number of pixels the screen on the device can display in width or more.
+    orientation: most modern devices can give us their orientation. This can be helpful for deciding between larger Android/BlackBerry phones in landscape vs. tablets in portrait.
+    */ 
+
+    /* Small phones - the easiest case */
+    @media screen and (max-width: 800px) {
+      .small { display: block; }
+    }
+
+    /* Larger devices */
+    /* Loosely covers larger BlackBerrys and Androids, and tablets */
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+       .larger { display: block; }
+    }
+
+    /* Regular ol' desktop */
+    @media screen and (min-width: 1025px) {
+      .desktop { display: block; }
+    }
+    
+    /* This is just to make this page look less ugly :) */
+    body {
+      font:14px/17px 'Helvetica Neue','Helvetica','Arial',sans-serif;
+      color:#444;
+    }
+    h1 {
+      color:#b1009a;
+      text-align:center;
+      font-size:30px;
+      margin:50px 0 0 0;
+      line-height:35px;
+    }
+    .wrap {
+      width:80%;
+      background:#eee;
+      border:1px solid #ddd;
+      margin:20px auto;
+      padding:20px;
+      border-radius:10px 0 10px 0;
+      -moz-border-radius:10px 0 10px 0;
+    }
+    .wrap h2 {
+      font-size:20px;
+      padding:0;
+    }
+	</style>
+</head>
+<body>
+<h1>Exercise #3 - Browser/Device Detection</h1>
+
+<div class='wrap'>
+
+  <h2>CSS3 Media Query Results</h2>
+  <p><strong>You're using a...</strong></p>
+  <p class='small'>Small device</p>
+  <p class='larger'>Larger devices and/or tablets.</p>
+  <p class='desktop'>Desktop</p>
+  
+</div>
+
+<div class='wrap'>
+  <h2>Trying in different browsers...</h2>
+  <p>The idea of using CSS Media Queries is to make it easier for us to manage our website on device <em>capabilities</em> rather than <em>specific browser</em>.</p>
+  <p><strong>A note on Android/BlackBerry devices:</strong> Since the screen sizes for BlackBerrys and Androids can differ between phones unlike iPhones, you'll notice that rotating a large Android device turns it into a 'tablet' or 'larger device'. Today we don't need to worry about this, but further design considerations and Media Queries can differentiate between tablets and these orientation changes.</p>
+</div>
+</body>
+</html>
